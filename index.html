@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<!-- What is this for?? 
+  stuff you don't see (meta data)
+-->
+<head>
+  <!-- attribute?? something that modifies the element in a specific way, they are key value pairs: add a key directly to the openning element, add a value using the `=` followed by openning or closing single or double.-->
+  <meta charset="utf-8">
+  <title>This displays in the browser tab</title>
+
+  <!-- CSS syntax includes curly brackets, all css property are surrounded by / enclosed in these.  the selector (id / element / class) goes right before the curly brackets. -->
+  <link href="/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<!-- Every pece of content that is display within the browser windows -->
+<body>
+
+  <!-- id and class attributes: helps us style our content. -->
+  <div id="banana" class="heading">
+    <div>
+      <a class="link">About Us</a>
+      <a class="link">Home Page</a>
+      <a class="link">Article 2</a>
+    </div>
+  </div>
+  <nav>
+    <a href="#content-1">Content 1</a>
+  </nav>
+  <p id="content-1">
+    Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph. Here is some paragraph.
+  </p>
+  <!-- <input type="text"> -->
+  <img src="https://via.placeholder.com/500x200" alt="placeholder image">
+
+  <script>
+    //  the syntax within these element tags, must be js
+
+    let name = 'banana';
+    // this value comes from the user!
+    let age = prompt('what is your age?');  // this is a built in function!
+    //let email = prompt("what is your email?");
+    let lovesJS = confirm('Do you love JS?');
+    // console.log('Sending email to: ', email);
+    // document.write(email);
+
+    // grabs an element from our HTML Document.
+    let content = document.getElementById('content-1');  //  an element with this exact id must exist in your HTML document.
+
+    console.log(content);
+    console.log(lovesJS);
+
+    // the value that contain the text data to our `age` value.
+    content.innerText = age;
+
+    // if and else
+    if (age >= 31) {
+      // console.log('Your old!'); // invoking / call a function
+      document.write('You\'re old!');
+    } else {
+      // console.log('Too young!');
+      document.write('You\'re young!');
+    }
+
+  </script>
+
+</body>
+
+</html>
